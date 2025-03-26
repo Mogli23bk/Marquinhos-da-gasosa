@@ -42,8 +42,9 @@ ng serve
 
 http://localhost:4200
 
-Estrutura do Projeto
+Estrutura do Projetos
 
+```
 projeto-angular/
 ├── .editorconfig
 ├── .gitignore
@@ -81,3 +82,4 @@ projeto-angular/
 │   ├── tsconfig.app.json
 │   ├── tsconfig.json
 │   └── tsconfig.spec.json
+```
