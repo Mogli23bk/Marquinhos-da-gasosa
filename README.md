@@ -42,3 +42,39 @@ ng serve
 
 http://localhost:4200
 
+├── .editorconfig
+├── .gitignore
+├── .vscode
+    ├── extensions.json
+    ├── launch.json
+    └── tasks.json
+├── README.md
+├── angular.json
+├── package-lock.json
+├── package.json
+├── public
+    └── relampago-1.ico
+├── src
+    ├── app
+    │   ├── app.component.css
+    │   ├── app.component.html
+    │   ├── app.component.spec.ts
+    │   ├── app.component.ts
+    │   ├── app.config.server.ts
+    │   ├── app.config.ts
+    │   ├── app.routes.server.ts
+    │   ├── app.routes.ts
+    │   └── posto
+    │   │   ├── posto.component.css
+    │   │   ├── posto.component.html
+    │   │   ├── posto.component.spec.ts
+    │   │   └── posto.component.ts
+    ├── index.html
+    ├── main.server.ts
+    ├── main.ts
+    ├── server.ts
+    └── styles.css
+├── tsconfig.app.json
+├── tsconfig.json
+└── tsconfig.spec.json
+
