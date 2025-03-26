@@ -1,0 +1,67 @@
+<div class="posto-container">
+    <!-- Cabeçalho -->
+    <header class="cabecalho">
+      <h1>Marquinhos da Gasosa</h1>
+      <nav>
+      </nav>
+    </header>
+  
+
+    <!-- Destaque: Placa de preços -->
+    <section class="destaque">
+      <h2>Preços Atuais</h2>
+      <div class="placa-precos">
+        <div *ngFor="let combustivel of combustiveis" class="combustivel">
+          <span class="nome">{{ combustivel.nome }}</span>
+          <span class="preco">R$ {{ combustivel.precoPorLitro | number:'1.2-2' }} / litro</span>
+        </div>
+      </div>
+    </section>
+  
+    <!-- Formulário de Abastecimento -->
+    <section class="formulario-abastecimento">
+      <h2>Abastecer</h2>
+      <div class="formulario">
+        <label for="combustivel">Combustível:</label>
+        <select id="combustivel" [(ngModel)]="combustivelSelecionado">
+          <option *ngFor="let combustivel of combustiveis" [ngValue]="combustivel ">{{ combustivel.nome }}</option>
+        </select>
+  
+        <label for="valor">Valor em Reais:</label>
+        <input id="valor" type="number" [(ngModel)]="valorEmReais" placeholder="Digite o valor em reais" min="0.01" step="0.01">
+  
+        <label for="litros">Quantidade em Litros:</label>
+        <input id="litros" type="number" [(ngModel)]="quantidadeEmLitros" placeholder="Digite a quantidade em litros" min="0.01" step="0.01">
+  
+        <div class="botoes">
+          <button (click)="calcularCompra()">Calcular</button>
+          <button (click)="limparFormulario()">Limpar</button>
+        </div>
+      </div>
+    </section>
+  
+    <!-- Recibo -->
+    <section *ngIf="recibo" class="recibo">
+      <h2>Recibo</h2>
+      <p><strong>Combustível:</strong> {{ recibo.combustivel }}</p>
+      <p><strong>Quantidade em Litros:</strong> {{ recibo.quantidadeLitros | number:'1.2-2' }}</p>
+      <p><strong>Valor Total:</strong> R$ {{ recibo.valorTotal | number:'1.2-2' }}</p>
+    </section>
+  
+    <!-- Histórico de Abastecimentos -->
+    <section class="historico">
+      <h2>Histórico de Abastecimentos</h2>
+      <ul>
+        <li *ngFor="let abastecimento of historico">
+          {{ abastecimento.data }} - {{ abastecimento.combustivel }}: {{ abastecimento.litros | number:'1.2-2' }} litros (R$ {{ abastecimento.valor | number:'1.2-2' }})
+        </li>
+      </ul>
+    </section>
+  
+    <!-- Rodapé -->
+    <footer class="rodape">
+      <p>Marquinhos da Gasosa &copy; 2023. Todos os direitos reservados.</p>
+      <p>Contato: (11) 98048-8833 | contato&#64;marquinhosdagasosa.com.br</p>
+      <p>Visite nosso parceiro: <a href="https://www.site-parceiro.com" target="_blank">Site Parceiro</a></p>
+    </footer>
+  </div>

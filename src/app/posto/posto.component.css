@@ -1,0 +1,226 @@
+/* Estilos gerais */
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #FF6B6B, #FFE66D); /* Gradiente criativo */
+    background-size: 200% 200%;
+    animation: gradientAnimation 10s ease infinite;
+    color: #333;
+  }
+  
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  .posto-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Fundo semi-transparente */
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Cabeçalho */
+  .cabecalho {
+    background-color: #D32F2F; /* Vermelho escuro */
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .cabecalho h1 {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.5rem;
+  }
+  
+  .cabecalho nav {
+    margin-top: 10px;
+  }
+  
+  .cabecalho nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+  }
+  
+
+
+  
+ 
+  
+  .banner-desconto a:hover {
+    color: #ffcc00;
+  }
+  
+  /* Destaque */
+  .destaque {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .placa-precos {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+  
+  .combustivel {
+    background-color: #D32F2F; /* Vermelho escuro */
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 30%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .combustivel .nome {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .combustivel .preco {
+    font-size: 18px;
+  }
+  
+  /* Formulário de Abastecimento */
+  .formulario-abastecimento {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .formulario label {
+    font-weight: bold;
+  }
+  
+  .formulario input, .formulario select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+  
+  .formulario input:focus, .formulario select:focus {
+    border-color: #D32F2F;
+    box-shadow: 0 0 5px rgba(211, 47, 47, 0.5);
+  }
+  
+  .botoes {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .botoes button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #D32F2F; /* Vermelho escuro */
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .botoes button:hover {
+    background-color: #B71C1C; /* Vermelho mais escuro */
+    transform: translateY(-2px);
+  }
+  
+  /* Recibo */
+  .recibo {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Histórico */
+  .historico {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .historico ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .historico li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .historico li:last-child {
+    border-bottom: none;
+  }
+  
+  /* Rodapé */
+  .rodape {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .rodape p {
+    margin: 5px 0;
+  }
+  
+  .rodape a {
+    color: #ffdd57;
+    text-decoration: none;
+  }
+  
+  .rodape a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .placa-precos {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .combustivel {
+      width: 100%;
+    }
+  
+    .banner-desconto img.relampago-marquinhos {
+      display: none; /* Esconde a imagem em dispositivos móveis */
+    }
+  }
